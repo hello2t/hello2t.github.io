@@ -109,7 +109,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: 'Penulis'
     },
     algolia: {
       applicationID: '',
@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Beranda
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Arsip
           </a>
         </li>
       
@@ -287,7 +287,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Diposting di</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-19T22:50:10+08:00">
                 2017-04-19
@@ -328,7 +328,7 @@
         
           
             <h3 id="OpenResty-编译安装"><a href="#OpenResty-编译安装" class="headerlink" title="OpenResty 编译安装"></a>OpenResty 编译安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">./configure --prefix=/data/openresty</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
-<h3 id="PHP-编译安装"><a href="#PHP-编译安装" class="headerlink" title="PHP 编译安装"></a>PHP 编译安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">yum install -y autoconf</div><div class="line">./buildconf --force</div><div class="line"></div><div class="line">./configure  --prefix=/data/php  --disable-debug --with-config-file-scan-dir=/data/php/etc/conf.d --with-config-file-path=/data/php/etc --with-fpm-user=www --with-fpm-group=www --enable-fpm --enable-opcache  --enable-session --enable-mbstring --enable-sockets --with-curl --with-openssl --with-mcrypt --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd</div><div class="line"></div><div class="line">cp php.ini-production /data/php/etc/php.ini</div><div class="line">cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</div><div class="line">cp /data/php/etc/php-fpm.conf.default /data/php/etc/php-fpm.conf</div><div class="line">cp /data/php/etc/php-fpm.d/www.conf.default /data/php/etc/php-fpm.d/www.conf</div></pre></td></tr></table></figure>
+<h3 id="PHP-编译安装"><a href="#PHP-编译安装" class="headerlink" title="PHP 编译安装"></a>PHP 编译安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">yum install -y autoconf</div><div class="line">./buildconf --force</div><div class="line"></div><div class="line">./configure  --prefix=/data/php  --disable-debug --with-config-file-scan-dir=/data/php/etc/conf.d --with-config-file-path=/data/php/etc --with-fpm-user=www --with-fpm-group=www --enable-fpm --enable-opcache  --enable-session --enable-mbstring --enable-sockets --with-curl --with-openssl --with-mcrypt --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd</div><div class="line"></div><div class="line">cp php.ini-production /data/php/etc/php.ini</div><div class="line">cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</div><div class="line">cp /data/php/etc/php-fpm.conf.default /data/php/etc/php-fpm.conf</div><div class="line">cp /data/php/etc/php-fpm.d/www.conf.default /data/php/etc/php-fpm.d/www.conf</div><div class="line">groupadd www</div><div class="line">useradd -g www www</div></pre></td></tr></table></figure>
 <h4 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h4><ul>
 <li>configure: WARNING: You will need re2c 0.13.4 or later if you want to regenerate PHP parsers.<br><code>yum install re2c</code></li>
 <li>configure: error: bison is required to build PHP/Zend when building a GIT checkout!<br><code>yum install bison</code></li>
@@ -431,7 +431,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posting</span>
               </a>
             </div>
           
@@ -444,7 +444,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">tags</span>
               
             </div>
           
@@ -494,11 +494,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Theme -
+  Tema -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
