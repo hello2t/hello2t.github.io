@@ -109,7 +109,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Penulis'
+      author: 'Author'
     },
     algolia: {
       applicationID: '',
@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Beranda
+            Startseite
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Arsip
+            Archiv
           </a>
         </li>
       
@@ -287,7 +287,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Diposting di</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-19T22:50:10+08:00">
                 2017-04-19
@@ -328,6 +328,10 @@
         
           
             <h3 id="OpenResty-编译安装"><a href="#OpenResty-编译安装" class="headerlink" title="OpenResty 编译安装"></a>OpenResty 编译安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">./configure --prefix=/data/openresty</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://www.nginx.com/resources/wiki/start/topics/examples/redhatnginxinit/" target="_blank" rel="external">service 启动脚本</a><br>修改环境相关的配置，并且把start里面的make_dirs注释<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line">#</div><div class="line"># nginx - this script starts and stops the nginx daemon</div><div class="line">#</div><div class="line"># chkconfig:   - 85 15</div><div class="line"># description:  NGINX is an HTTP(S) server, HTTP(S) reverse \</div><div class="line">#               proxy and IMAP/POP3 proxy server</div><div class="line"># processname: nginx</div><div class="line"># config:      /etc/nginx/nginx.conf</div><div class="line"># config:      /etc/sysconfig/nginx</div><div class="line"># pidfile:     /var/run/nginx.pid</div><div class="line"></div><div class="line"># Source function library.</div><div class="line">. /etc/rc.d/init.d/functions</div><div class="line"></div><div class="line"># Source networking configuration.</div><div class="line">. /etc/sysconfig/network</div><div class="line"></div><div class="line"># Check that networking is up.</div><div class="line">[ &quot;$NETWORKING&quot; = &quot;no&quot; ] &amp;&amp; exit 0</div><div class="line"></div><div class="line">nginx=&quot;/data/openresty/bin/openresty&quot;</div><div class="line">prog=$(basename $nginx)</div><div class="line"></div><div class="line">NGINX_CONF_FILE=&quot;/data/openresty/nginx/conf/nginx.conf&quot;</div><div class="line"></div><div class="line">[ -f /etc/sysconfig/nginx ] &amp;&amp; . /etc/sysconfig/nginx</div><div class="line"></div><div class="line">lockfile=/var/lock/subsys/nginx</div><div class="line"></div><div class="line">make_dirs() &#123;</div><div class="line">   # make required directories</div><div class="line">   user=`$nginx -V 2&gt;&amp;1 | grep &quot;configure arguments:.*--user=&quot; | sed &apos;s/[^*]*--user=\([^ ]*\).*/\1/g&apos; -`</div><div class="line">   if [ -n &quot;$user&quot; ]; then</div><div class="line">      if [ -z &quot;`grep $user /etc/passwd`&quot; ]; then</div><div class="line">         useradd -M -s /bin/nologin $user</div><div class="line">      fi</div><div class="line">      options=`$nginx -V 2&gt;&amp;1 | grep &apos;configure arguments:&apos;`</div><div class="line">      for opt in $options; do</div><div class="line">          if [ `echo $opt | grep &apos;.*-temp-path&apos;` ]; then</div><div class="line">              value=`echo $opt | cut -d &quot;=&quot; -f 2`</div><div class="line">              if [ ! -d &quot;$value&quot; ]; then</div><div class="line">                  # echo &quot;creating&quot; $value</div><div class="line">                  mkdir -p $value &amp;&amp; chown -R $user $value</div><div class="line">              fi</div><div class="line">          fi</div><div class="line">       done</div><div class="line">    fi</div><div class="line">&#125;</div><div class="line"></div><div class="line">start() &#123;</div><div class="line">    [ -x $nginx ] || exit 5</div><div class="line">    [ -f $NGINX_CONF_FILE ] || exit 6</div><div class="line">    # make_dirs</div><div class="line">    echo -n $&quot;Starting $prog: &quot;</div><div class="line">    daemon $nginx -c $NGINX_CONF_FILE</div><div class="line">    retval=$?</div><div class="line">    echo</div><div class="line">    [ $retval -eq 0 ] &amp;&amp; touch $lockfile</div><div class="line">    return $retval</div><div class="line">&#125;</div><div class="line"></div><div class="line">stop() &#123;</div><div class="line">    echo -n $&quot;Stopping $prog: &quot;</div><div class="line">    killproc $prog -QUIT</div><div class="line">    retval=$?</div><div class="line">    echo</div><div class="line">    [ $retval -eq 0 ] &amp;&amp; rm -f $lockfile</div><div class="line">    return $retval</div><div class="line">&#125;</div><div class="line"></div><div class="line">restart() &#123;</div><div class="line">    configtest || return $?</div><div class="line">    stop</div><div class="line">    sleep 1</div><div class="line">    start</div><div class="line">&#125;</div><div class="line"></div><div class="line">reload() &#123;</div><div class="line">    configtest || return $?</div><div class="line">    echo -n $&quot;Reloading $prog: &quot;</div><div class="line">    killproc $nginx -HUP</div><div class="line">    RETVAL=$?</div><div class="line">    echo</div><div class="line">&#125;</div><div class="line"></div><div class="line">force_reload() &#123;</div><div class="line">    restart</div><div class="line">&#125;</div><div class="line"></div><div class="line">configtest() &#123;</div><div class="line">  $nginx -t -c $NGINX_CONF_FILE</div><div class="line">&#125;</div><div class="line"></div><div class="line">rh_status() &#123;</div><div class="line">    status $prog</div><div class="line">&#125;</div><div class="line"></div><div class="line">rh_status_q() &#123;</div><div class="line">    rh_status &gt;/dev/null 2&gt;&amp;1</div><div class="line">&#125;</div><div class="line"></div><div class="line">case &quot;$1&quot; in</div><div class="line">    start)</div><div class="line">        rh_status_q &amp;&amp; exit 0</div><div class="line">        $1</div><div class="line">        ;;</div><div class="line">    stop)</div><div class="line">        rh_status_q || exit 0</div><div class="line">        $1</div><div class="line">        ;;</div><div class="line">    restart|configtest)</div><div class="line">        $1</div><div class="line">        ;;</div><div class="line">    reload)</div><div class="line">        rh_status_q || exit 7</div><div class="line">        $1</div><div class="line">        ;;</div><div class="line">    force-reload)</div><div class="line">        force_reload</div><div class="line">        ;;</div><div class="line">    status)</div><div class="line">        rh_status</div><div class="line">        ;;</div><div class="line">    condrestart|try-restart)</div><div class="line">        rh_status_q || exit 0</div><div class="line">            ;;</div><div class="line">    *)</div><div class="line">        echo $&quot;Usage: $0 &#123;start|stop|status|restart|condrestart|try-restart|reload|force-reload|configtest&#125;&quot;</div><div class="line">        exit 2</div><div class="line">esac</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <h3 id="PHP-编译安装"><a href="#PHP-编译安装" class="headerlink" title="PHP 编译安装"></a>PHP 编译安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">yum install -y autoconf</div><div class="line">./buildconf --force</div><div class="line"></div><div class="line">./configure  --prefix=/data/php  --disable-debug --with-config-file-scan-dir=/data/php/etc/conf.d --with-config-file-path=/data/php/etc --with-fpm-user=www --with-fpm-group=www --enable-fpm --enable-opcache  --enable-session --enable-mbstring --enable-sockets --with-curl --with-openssl --with-mcrypt --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd</div><div class="line"></div><div class="line">cp php.ini-production /data/php/etc/php.ini</div><div class="line">cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</div><div class="line">cp /data/php/etc/php-fpm.conf.default /data/php/etc/php-fpm.conf</div><div class="line">cp /data/php/etc/php-fpm.d/www.conf.default /data/php/etc/php-fpm.d/www.conf</div><div class="line">groupadd www</div><div class="line">useradd -g www www</div></pre></td></tr></table></figure>
 <h4 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h4><ul>
 <li>configure: WARNING: You will need re2c 0.13.4 or later if you want to regenerate PHP parsers.<br><code>yum install re2c</code></li>
@@ -431,7 +435,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">posting</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -444,7 +448,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               
             </div>
           
@@ -494,11 +498,11 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Tema -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
