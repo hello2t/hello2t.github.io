@@ -90,12 +90,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hello2t">
-<meta property="og:url" content="https://hello2t.github.io/index.html">
+<meta name="description" content="gdb 调试 nginx echo module 编译Nginx 1./configure --with-debug --prefix=/data/nginx --add-module=/root/echo-nginx-module  修改配置 1234567daemon on;master_process on;worker_processes  1;error_log  logs/error.">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gdb-debug-nginx-echo-module">
+<meta property="og:url" content="https://hello2t.github.io/2017/11/25/gdb-debug-nginx-echo-module/index.html">
 <meta property="og:site_name" content="Hello2t">
+<meta property="og:description" content="gdb 调试 nginx echo module 编译Nginx 1./configure --with-debug --prefix=/data/nginx --add-module=/root/echo-nginx-module  修改配置 1234567daemon on;master_process on;worker_processes  1;error_log  logs/error.">
+<meta property="og:updated_time" content="2017-11-25T08:01:03.031Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello2t">
+<meta name="twitter:title" content="gdb-debug-nginx-echo-module">
+<meta name="twitter:description" content="gdb 调试 nginx echo module 编译Nginx 1./configure --with-debug --prefix=/data/nginx --add-module=/root/echo-nginx-module  修改配置 1234567daemon on;master_process on;worker_processes  1;error_log  logs/error.">
 
 
 
@@ -123,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://hello2t.github.io/"/>
+  <link rel="canonical" href="https://hello2t.github.io/2017/11/25/gdb-debug-nginx-echo-module/"/>
 
 
 
 
 
-  <title> Hello2t </title>
+  <title> gdb-debug-nginx-echo-module | Hello2t </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -154,9 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,9 +242,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -271,10 +274,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/11/25/gdb-debug-nginx-echo-module/" itemprop="url">
-                  gdb-debug-nginx-echo-module
-                </a>
+                gdb-debug-nginx-echo-module
               
             
           </h1>
@@ -325,9 +325,7 @@
       
 
       
-        
-          
-            <h3 id="gdb-调试-nginx-echo-module"><a href="#gdb-调试-nginx-echo-module" class="headerlink" title="gdb 调试 nginx echo module"></a>gdb 调试 nginx echo module</h3><ul>
+        <h3 id="gdb-调试-nginx-echo-module"><a href="#gdb-调试-nginx-echo-module" class="headerlink" title="gdb 调试 nginx echo module"></a>gdb 调试 nginx echo module</h3><ul>
 <li><p>编译Nginx</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./configure --with-debug --prefix=/data/nginx --add-module=/root/echo-nginx-module</div></pre></td></tr></table></figure>
 </li>
@@ -346,20 +344,27 @@
 <p>剩下就一步一步的n、s、p就行了。</p>
 <h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">(gdb) p computed_arg_elts</div><div class="line">$8 = (ngx_str_t *) 0x1f02c40</div><div class="line">(gdb)</div><div class="line">$9 = (ngx_str_t *) 0x1f02c40</div><div class="line">(gdb) p 0x1f02c40</div><div class="line">$10 = 32517184</div><div class="line">(gdb) p $9.data</div><div class="line">$11 = (u_char *) 0x1f0e558 &quot;hello&quot;</div></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -367,168 +372,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://hello2t.github.io/2017/04/19/openresty-php-install/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="hello2t">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello2t">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-              
-                
-                <a class="post-title-link" href="/2017/04/19/openresty-php-install/" itemprop="url">
-                  Openresty & PHP7 编译安装
-                </a>
-              
+              <a href="/2017/04/19/openresty-php-install/" rel="prev" title="Openresty & PHP7 编译安装">
+                Openresty & PHP7 编译安装 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-19T00:00:00+08:00">
-                2017-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="OpenResty-编译安装"><a href="#OpenResty-编译安装" class="headerlink" title="OpenResty 编译安装"></a>OpenResty 编译安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">./configure --prefix=/data/openresty</div><div class="line">yum install pcre-devel</div><div class="line">yum install openssl-devel</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://www.nginx.com/resources/wiki/start/topics/examples/redhatnginxinit/" target="_blank" rel="external">service 启动脚本</a><br>修改环境相关的配置</li>
-</ul>
-<h3 id="PHP-编译安装"><a href="#PHP-编译安装" class="headerlink" title="PHP 编译安装"></a>PHP 编译安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">yum install -y autoconf</div><div class="line">yum install openssl-devel bison libxml2-devel libcurl-devel</div><div class="line">./buildconf --force</div><div class="line"></div><div class="line">./configure  --prefix=/data/php  --disable-debug --with-config-file-scan-dir=/data/php/etc/conf.d --with-config-file-path=/data/php/etc --with-fpm-user=www --with-fpm-group=www --enable-fpm --enable-opcache  --enable-session --enable-mbstring --enable-sockets --with-curl --with-openssl --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd</div><div class="line"></div><div class="line">cp php.ini-production /data/php/etc/php.ini</div><div class="line">cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</div><div class="line">cp /data/php/etc/php-fpm.conf.default /data/php/etc/php-fpm.conf</div><div class="line">cp /data/php/etc/php-fpm.d/www.conf.default /data/php/etc/php-fpm.d/www.conf</div><div class="line">groupadd www</div><div class="line">useradd -g www www</div></pre></td></tr></table></figure>
-<h4 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h4><ul>
-<li>configure: WARNING: You will need re2c 0.13.4 or later if you want to regenerate PHP parsers.<br><code>yum install re2c</code></li>
-<li>configure: error: bison is required to build PHP/Zend when building a GIT checkout!<br><code>yum install bison</code></li>
-<li>configure: error: xml2-config not found. Please check your libxml2 installation.<br><code>yum install libxml2-devel</code></li>
-<li>configure: error: Cannot find OpenSSL’s <evp.h><br><code>yum install openssl-devel</code></evp.h></li>
-<li>configure: error: Please reinstall the libcurl easy.h should be in <curl-dir>/include/curl/<br><code>yum install libcurl-devel</code></curl-dir></li>
-<li>configure: error: mcrypt.h not found. Please reinstall libmcrypt.<br>注意第三方源才有<br><code>yum install libmcrypt libmcrypt-devel</code></li>
-</ul>
-<h3 id="OpCache-扩展配置"><a href="#OpCache-扩展配置" class="headerlink" title="OpCache 扩展配置"></a>OpCache 扩展配置</h3><ul>
-<li>opcache.ini<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">zend_extension=opcache.so</div><div class="line">opcache.enable=1</div><div class="line">opcache.enable_cli=1</div><div class="line">#opcache.huge_code_pages=1</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="PHPRedis-扩展安装"><a href="#PHPRedis-扩展安装" class="headerlink" title="PHPRedis 扩展安装"></a>PHPRedis 扩展安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/data/php/bin/phpize</div><div class="line">./configure --with-php-config=/data/php/bin/php-config</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
-<ul>
-<li>redis.ini<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">extension=redis.so</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="XDebug-扩展安装"><a href="#XDebug-扩展安装" class="headerlink" title="XDebug 扩展安装"></a>XDebug 扩展安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/data/php/bin/phpize</div><div class="line">./configure --enable-xdebug--with-php-config=/data/php/bin/php-config</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
-<ul>
-<li>xdebug.ini<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">[xdebug]</div><div class="line">zend_extension=&quot;xdebug.so&quot;</div><div class="line">xdebug.trace_output_dir=&quot;/tmp&quot;</div><div class="line">xdebug.trace_output_name=trace.%H.%t</div><div class="line">; 记录添加到文件中方式：1 = 追加(如果存在该文件). 0 (default) = 覆盖（如果存在该文件）</div><div class="line">xdebug.trace_options=0</div><div class="line">; trace 数据格式</div><div class="line">; 0   shows a human readable indented trace file</div><div class="line">; 1   writes a computer readable format which has two different records</div><div class="line">; 2   writes a trace formatted in (simple) HTML</div><div class="line">xdebug.trace_format=0</div><div class="line">; 显示数据</div><div class="line">; 0 = 不显示.</div><div class="line">; 1 = 参数类型，值  (例如：array(9)).</div><div class="line">; 2 = 同上1，只是在CLI模式下略微有区别</div><div class="line">; 3 = 所有变量内容（受到 xdebug.var_display_max_children,xdebug.var_display_max_data 和xdebug.var_display_max_depth限制）</div><div class="line">; 4 = 所有变量内容和变量名(例如：array(0 =&gt; 9)).</div><div class="line">xdebug.collect_params=0</div><div class="line">; 是否收集函数返回值</div><div class="line">xdebug.collect_return=0</div><div class="line">; 关闭自动追踪，使用 XDEBUG_TRACE GET/POST 触发追踪, 或者通过设置cookie XDEBUG_TRACE</div><div class="line">xdebug.auto_trace=0</div><div class="line">xdebug.trace_enable_trigger=1</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -536,6 +411,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -555,8 +434,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -609,6 +497,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#gdb-调试-nginx-echo-module"><span class="nav-number">1.</span> <span class="nav-text">gdb 调试 nginx echo module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果图"><span class="nav-number">2.</span> <span class="nav-text">效果图</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -722,6 +626,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
